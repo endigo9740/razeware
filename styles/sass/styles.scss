@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {color: $colorBlack; font-family: $fontBitter;}
 h1 {font-weight: normal;}
 h2 {font-size: 40px; margin-bottom: 10px;}
 p, a {color: $colorGrey; font-size: 16px; line-height: 24px;}
-a {text-decoration: none;}
+a {text-decoration: none; transition: all 50ms ease-in-out;}
 a:hover, a:active, a:focus {color: $colorBlack;}
 ul li {list-style: none;}
 
@@ -93,12 +93,18 @@ header {
 	#introTeam {max-width: 600px; margin: auto; text-align: center;}
 	#teamGallery {
 		width: 600px; overflow: hidden;
-		li {
-			float: left; padding-top: 40px; text-align: center; width: 25%;
+		a {
+			float: left; font-size: 14px; padding-top: 40px; text-align: center; width: 25%;
+			transition: all 100ms ease-in-out;
+			div {border-radius: 50px; width: 100px; height: 100px; margin: 0 auto 5px; overflow: hidden;}
 		}
-		li:nth-child(5) {margin-left: 70px;} // center second row
-		img {border-radius: 50px;}
-		span {font-size: 14px; display: block; margin-top: 5px;}
+		$teamImgScale: 1.1;
+		a:hover img {
+			-ms-transform: scale($teamImgScale);
+    		-webkit-transform: scale($teamImgScale);
+    		transform: scale($teamImgScale);
+		}
+		a:nth-child(5) {margin-left: 70px;} // center second row
 	}
 }
 
