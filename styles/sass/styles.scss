@@ -1,0 +1,95 @@
+// --- SASS ---
+
+// Color Vars
+$colorWhite: #FFF;
+$colorBlack: #262626;
+$colorGrey: #999;
+$colorGreen: #006837;
+$colorGreenDark: #00512B;
+$colorBlue: #429AF9;
+$colorRed: #F94242;
+$colorYellow: #FBB943;
+
+// Fonts
+$fontDefault: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontBitter: 'Bitter', serif; // Google Font (400/700)
+
+// --- CORE ---
+
+* {margin: 0; padding: 0;}
+
+html {background: $colorWhite; font-family: $fontDefault;}
+body {}
+
+// --- TYPOGRAPHY & GLOBALS ---
+
+h1, h2, h3, h4, h5, h6 {color: $colorBlack; font-family: $fontBitter;}
+h1 {font-weight: normal;}
+h2 {margin-bottom: 10px;}
+p, a {color: $colorGrey; font-size: 16px; line-height: 24px;}
+a {text-decoration: none;}
+a:hover, a:active, a:focus {color: $colorBlack;}
+ul li {list-style: none;}
+
+// --- CLASSES ---
+
+.wrap {max-width: 1024px; margin: auto;}
+.button {
+	background: $colorBlack; border-radius: 15px; color: $colorWhite; line-height: 30px; padding: 0 40px;
+	&:hover, &:active, &:focus {background: $colorGrey; color: $colorWhite;}
+}
+
+// --- PAGE ---
+
+// Header
+header {
+	background: $colorWhite; padding: 20px; overflow: hidden;
+	border-bottom: 1px solid #CCC; // REMOVE THIS
+	#logo, #navPrimary {float: left;}
+	#btnContact {float: right;}
+}
+#navPrimary {
+	margin-left: 40px;
+	a {line-height: 30px;}
+	a+a {margin-left: 40px;}
+}
+
+// Hero Banner
+#hero {
+	background: $colorBlack; height: 460px; padding: 20px 0;
+}
+
+// Services
+#services {
+	padding: 50px 0;
+	#introServices {max-width: 600px; margin: auto; text-align: center;}
+	#stats {
+		display: flex; flex-wrap: wrap; margin-top: 50px;
+		li {
+  			box-sizing: border-box; color: $colorGrey; flex: 1 0 25%; text-align: center;
+  			strong {color: $colorBlack; display: block; font-size: 32px; font-weight: bold; margin-bottom: 5px;}
+		}
+	}
+}
+
+// Conference
+#conference {
+	background: $colorBlack url('../../img/bg-dark.jpg') center center fixed; height: 260px; padding: 20px 0;
+}
+
+// Team
+#team {
+	padding: 50px 0;
+	#introTeam {max-width: 600px; margin: auto; text-align: center;}
+}
+
+// Footer
+footer {
+	background: $colorBlack; padding: 20px 0; margin-bottom: 50px;
+}
+
+// --- RESPONSIVE STYLES ---
+// ...
+
+// --- ANIMATIONS ---
+// ...
