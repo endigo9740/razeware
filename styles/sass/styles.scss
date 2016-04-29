@@ -4,6 +4,7 @@
 $colorWhite: #FFF;
 $colorBlack: #262626;
 $colorGrey: #999;
+$colorGreyLight: #EEE;
 $colorGreen: #006837;
 $colorGreenDark: #00512B;
 $colorBlue: #429AF9;
@@ -19,13 +20,13 @@ $fontBitter: 'Bitter', serif; // Google Font (400/700)
 * {margin: 0; padding: 0;}
 
 html {background: $colorWhite; font-family: $fontDefault;}
-body {}
+body {margin-top: 71px;} // offset for header
 
 // --- TYPOGRAPHY & GLOBALS ---
 
 h1, h2, h3, h4, h5, h6 {color: $colorBlack; font-family: $fontBitter;}
 h1 {font-weight: normal;}
-h2 {margin-bottom: 10px;}
+h2 {font-size: 40px; margin-bottom: 10px;}
 p, a {color: $colorGrey; font-size: 16px; line-height: 24px;}
 a {text-decoration: none;}
 a:hover, a:active, a:focus {color: $colorBlack;}
@@ -43,8 +44,8 @@ ul li {list-style: none;}
 
 // Header
 header {
-	background: $colorWhite; padding: 20px; overflow: hidden;
-	border-bottom: 1px solid #CCC; // REMOVE THIS
+	background: $colorWhite; border-bottom: 1px solid $colorGreyLight; padding: 20px; overflow: hidden;
+	position: fixed; top: 0; left: 0; right: 0;
 	#logo, #navPrimary {float: left;}
 	#btnContact {float: right;}
 }
@@ -56,7 +57,7 @@ header {
 
 // Hero Banner
 #hero {
-	background: $colorBlack; height: 460px; padding: 20px 0;
+	background: $colorBlack url('../../img/hero-graphic.png') center center repeat-x; background-size: cover; height: 460px; padding: 20px 0;
 }
 
 // Services
@@ -71,6 +72,15 @@ header {
 		}
 	}
 }
+#cells {
+	overflow: hidden;
+	.cell {border: 1px solid $colorGreyLight; float: left; margin-top: 20px; padding: 20px; width: 460px;}
+	.cell:nth-child(odd) {margin-right: 20px;}
+	#tutorials {border-bottom: 10px solid $colorBlue;}
+	#videos {border-bottom: 10px solid $colorYellow;}
+	#books {border-bottom: 10px solid $colorRed;}
+	#podcasts {border-bottom: 10px solid $colorGreen;}
+}
 
 // Conference
 #conference {
@@ -81,6 +91,15 @@ header {
 #team {
 	padding: 50px 0;
 	#introTeam {max-width: 600px; margin: auto; text-align: center;}
+	#teamGallery {
+		width: 600px; overflow: hidden;
+		li {
+			float: left; padding-top: 40px; text-align: center; width: 25%;
+		}
+		li:nth-child(5) {margin-left: 70px;} // center second row
+		img {border-radius: 50px;}
+		span {font-size: 14px; display: block; margin-top: 5px;}
+	}
 }
 
 // Footer
