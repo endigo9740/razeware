@@ -20,15 +20,30 @@
 				<a data-scroll href="#team">Team</a>
 			</nav>
 			<a id="btnContact" data-scroll href="#contact" class="button">Contact Us</a>
+			<span id="hamburgerMenu" onclick="toggleMobileMenu()">
+				<img src="img/icon-hamburger.png" alt="Open Menu">
+			</span>
 		</div>
 	</header>
+
+	<!-- Mobile Menu -->
+	<!-- Toggle class showFade to show/hide menu -->
+	<div id="menuFade">
+		<nav id="navMobile">
+			<a data-scroll href="#top" id="linkTop" onclick="toggleMobileMenu(false)"><img src="img/arrow-up.png" alt="Up">Top of Page</a>
+			<a data-scroll href="#services" onclick="toggleMobileMenu(false)">Services</a>
+			<a data-scroll href="#conference" onclick="toggleMobileMenu(false)">RWDevCon</a>
+			<a data-scroll href="#team" onclick="toggleMobileMenu(false)">Team</a>
+			<a data-scroll href="#contact" onclick="toggleMobileMenu(false)">Contact Us</a>
+		</nav>
+	</div>
 
 	<!-- Hero Banner -->
 	<section id="hero">
 		<div class="wrap">
 			<img id="logo" src="img/logo-icon.png" alt="Razeware">
 			<h1>Welcome to <strong>Razeware.</strong></h1>
-			<p>Razeware is the most popular iOS developement site on the<br>Internet, full of high quality tutorials for various skills sets.</p>
+			<p>Razeware is the most popular iOS developement site on the <br>Internet, full of high quality tutorials for various skills sets.</p>
 			<a href="#" class="button btnBigGreen">Get Our Newsletter</a>
 		</div>
 	</section>
@@ -53,7 +68,7 @@
 					<div><img src="img/service-tutorials.png" alt="Tutorials"></div>
 					<h2>Tutorials</h2>
 					<p>Browse over 1,200 high quality written tutorials, including an extensive catalog for learning iOS developement.</p>
-					<a href="https://www.raywenderlich.com/" class="button">Start Learning</a>
+					<a href="https://www.raywenderlich.com/" class="button">View Now</a>
 				</div>
 			</div>
 			<div class="cell">
@@ -61,7 +76,7 @@
 					<div><img src="img/service-videos.png" alt="Videos"></div>
 					<h2>Videos</h2>
 					<p>Prefer to watch and learn? Check out any of our 500+ videos, across more than 50 video tutorials series.</p>
-					<a href="https://www.raywenderlich.com/video-tutorials" class="button">Start Watching</a>
+					<a href="https://www.raywenderlich.com/video-tutorials" class="button">View Now</a>
 				</div>
 			</div>
 			<div class="cell">
@@ -69,7 +84,7 @@
 					<div><img src="img/service-books.png" alt="Books"></div>
 					<h2>Books</h2>
 					<p>Learn how to make awesome apps from the ground up, with our published series of epic-length books!</p>
-					<a href="https://www.raywenderlich.com/store" class="button">Purchase Now</a>
+					<a href="https://www.raywenderlich.com/store" class="button">View Now</a>
 				</div>
 			</div>
 			<div class="cell">
@@ -77,7 +92,7 @@
 					<div><img src="img/service-podcasts.png" alt="Podcasts"></div>
 					<h2>Podcasts</h2>
 					<p>Join Mic and Jake as they discuss every aspect of app dev with well-known characters from the developer community.</p>
-					<a href="https://www.raywenderlich.com/rwpodcast" class="button">Start Listening</a>
+					<a href="https://www.raywenderlich.com/rwpodcast" class="button">View Now</a>
 				</div>
 			</div>
 		</div>
@@ -92,6 +107,7 @@
 				<h2>RWDevCon</h2>
 				<h4>The Tutorial Conference</h4>
 				<a href="http://www.rwdevcon.com/" class="button btnBigGreen" target="_blank">Sign Up Now</a>
+				<img id="confDeviceImgMobile" src="img/conf-device-mobile.png" alt="Conference Device">
 			</div>
 		</div>
 	</section>
@@ -140,8 +156,8 @@
 	<footer>
 		<div class="wrap">
 			<div id="columns">
-				<div class="col"><img src="img/footer-logo.png" alt="Razeware"></div>
-				<div class="col">
+				<div class="col" id="colLogo"><img src="img/footer-logo.png" alt="Razeware"></div>
+				<div class="col" id="colNav">
 					<h3>Navigation</h3>
 					<nav class="navList">
 						<a data-scroll href="#top">Top of Page</a>
@@ -150,18 +166,10 @@
 						<a data-scroll href="#team">Team</a>
 					</nav>
 				</div>
-				<div class="col">
+				<div class="col" id="colConference">
 					<h3>RWDevCon</h3>
-					<p>Signup for the our upcoming<br>conference on March 11-12.<br>Westin Alexandria Hotel, VA.</p>
+					<p>Signup for the our upcoming conference on March 11-12. Westin Alexandria Hotel, VA.</p>
 					<a href="http://www.rwdevcon.com/" class="button btnLineWhite" target="_blank">Sign Up Now</a>
-				</div>
-				<div id="copyright">
-					<span>Copyright &copy; 2016 Razeware. All rights reserved.</span>
-					<nav>
-						<a href="#" target="_blank"><img src="img/icon-facebook.png" alt="Facebook"></a>
-						<a href="#" target="_blank"><img src="img/icon-twitter.png" alt="Twitter"></a>
-						<a href="#" target="_blank"><img src="img/icon-linkedin.png" alt="LinkedIn"></a>
-					</nav>
 				</div>
 			</div>
 			<form id="formContact" action="">
@@ -172,6 +180,16 @@
 			</form>
 		</div>
 	</footer>
+
+	<!-- Copyright -->
+	<div id="copyright" class="wrap">
+		<span>Copyright &copy; 2016 Razeware. All rights reserved.</span>
+		<nav>
+			<a href="https://www.facebook.com/raywenderlich" target="_blank"><img src="img/icon-facebook.png" alt="Facebook"></a>
+			<a href="https://twitter.com/rwenderlich/lists/raywenderlich-com-team" target="_blank"><img src="img/icon-twitter.png" alt="Twitter"></a>
+			<a href="https://www.linkedin.com/company/2590045" target="_blank"><img src="img/icon-linkedin.png" alt="LinkedIn"></a>
+		</nav>
+	</div>
 
 	<script src="scripts/scripts.js"></script>
 </body>
