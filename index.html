@@ -46,12 +46,42 @@
 				<li><strong>12</strong> Books</li>
 			</ul>
 		</div>
+
 		<div id="cells">
-			<div id="tutorials" class="cell">tutorials</div>
-			<div id="videos" class="cell">videos</div>
-			<div id="books" class="cell">books</div>
-			<div id="podcasts" class="cell">podcasts</div>
+			<div class="cell">
+				<div id="tutorials" class="cellInner">
+					<div><img src="img/service-tutorials.png" alt="Tutorials"></div>
+					<h2>Tutorials</h2>
+					<p>Browse over 1,200 high quality written tutorials, including an extensive catalog for learning iOS developement.</p>
+					<a href="https://www.raywenderlich.com/" class="button">Start Learning</a>
+				</div>
+			</div>
+			<div class="cell">
+				<div id="videos" class="cellInner">
+					<div><img src="img/service-videos.png" alt="Videos"></div>
+					<h2>Videos</h2>
+					<p>Prefer to watch and learn? Check out any of our 500+ videos, across more than 50 video tutorials series.</p>
+					<a href="https://www.raywenderlich.com/video-tutorials" class="button">Start Watching</a>
+				</div>
+			</div>
+			<div class="cell">
+				<div id="books" class="cellInner">
+					<div><img src="img/service-books.png" alt="Books"></div>
+					<h2>Books</h2>
+					<p>Learn how to make awesome apps from the ground up, with our published series of epic-length books!</p>
+					<a href="https://www.raywenderlich.com/store" class="button">Purchase Now</a>
+				</div>
+			</div>
+			<div class="cell">
+				<div id="podcasts" class="cellInner">
+					<div><img src="img/service-podcasts.png" alt="Podcasts"></div>
+					<h2>Podcasts</h2>
+					<p>Join Mic and Jake as they discuss every aspect of app dev with well-known characters from the developer community.</p>
+					<a href="https://www.raywenderlich.com/rwpodcast" class="button">Start Listening</a>
+				</div>
+			</div>
 		</div>
+
 	</section>
 
 	<!-- Conference Call Out -->
@@ -73,11 +103,11 @@
 			<h2>We are Razeware</h2>
 			<p>Meet the Razeware team.</p>
 			<nav id="teamGallery">
-				<a href="#" target="_blank">
+				<a href="https://www.raywenderlich.com/u/rwenderlich" target="_blank">
 					<div><img src="img/team/ray.png" alt="ray"></div>
 					Ray Wenderlich
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://www.raywenderlich.com/u/vwenderlich" target="_blank">
 					<div><img src="img/team/vicki.png" alt="vicki"></div>
 					Vicki Wenderlich
 				</a>
@@ -85,19 +115,19 @@
 					<div><img src="img/team/mic.jpeg" alt="mic"></div>
 					Mic Pringle
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://www.raywenderlich.com/u/samdavies" target="_blank">
 					<div><img src="img/team/sam.jpeg" alt="sam"></div>
 					Sam Davies
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://www.raywenderlich.com/u/vegetarianzombie" target="_blank">
 					<div><img src="img/team/brian.jpeg" alt="brian"></div>
 					Brian Moakley
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://www.raywenderlich.com/u/csweigart" target="_blank">
 					<div><img src="img/team/christine.jpeg" alt="christine"></div>
 					Christine Sweigart
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://twitter.com/billmurray" target="_blank">
 					<div><img src="img/team/bill.png" alt="bill"></div>
 					Bill Murray
 				</a>
@@ -109,7 +139,37 @@
 	<a id="contact" name="contact"></a>
 	<footer>
 		<div class="wrap">
-			<p>(footer)</p>
+			<div id="columns">
+				<div class="col"><img src="img/footer-logo.png" alt="Razeware"></div>
+				<div class="col">
+					<h3>Navigation</h3>
+					<nav class="navList">
+						<a data-scroll href="#top">Top of Page</a>
+						<a data-scroll href="#services">Services</a>
+						<a data-scroll href="#conference">RWDevCon</a>
+						<a data-scroll href="#team">Team</a>
+					</nav>
+				</div>
+				<div class="col">
+					<h3>RWDevCon</h3>
+					<p>Signup for the our upcoming<br>conference on March 11-12.<br>Westin Alexandria Hotel, VA.</p>
+					<a href="http://www.rwdevcon.com/" class="button btnLineWhite" target="_blank">Sign Up Now</a>
+				</div>
+				<div id="copyright">
+					<span>Copyright &copy; 2016 Razeware. All rights reserved.</span>
+					<nav>
+						<a href="#" target="_blank"><img src="img/icon-facebook.png" alt="Facebook"></a>
+						<a href="#" target="_blank"><img src="img/icon-twitter.png" alt="Twitter"></a>
+						<a href="#" target="_blank"><img src="img/icon-linkedin.png" alt="LinkedIn"></a>
+					</nav>
+				</div>
+			</div>
+			<form id="formContact" action="">
+				<h3>Reach Out</h3>
+				<input type="text" id="name" name="name" placeholder="Your Name">
+				<textarea name="message" id="message" cols="30" rows="5" placeholder="Your Message..."></textarea>
+				<button class="btnLineWhite">Submit</button>
+			</form>
 		</div>
 	</footer>
 
