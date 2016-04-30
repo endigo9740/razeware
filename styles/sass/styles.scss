@@ -84,6 +84,7 @@ header {
 
 // Mobile Hamburger Menu
 #menuFade {
+	display: none;
 	background: rgba(0,0,0,0);
 	position: fixed; top: 51px; left: 0; right: 0; bottom: 0; z-index: 777;
 	-webkit-transition: all 250ms linear; -ms-transition: all 250ms linear; transition: all 250ms linear;
@@ -102,6 +103,7 @@ header {
 	}
 }
 .showFade {
+	display: block !important;
 	background: rgba(0,0,0,0.95) !important;
 	#navMobile {margin-right: 0 !important;}
 }
@@ -226,7 +228,7 @@ footer {
 		.cell {width: 100%;}
 	}
 }
-@media (max-width: 640px) {
+@media (max-width: 640px) {	
 	#navPrimary {
 		margin-left: 15px;
 		a+a {margin-left: 15px;}
@@ -248,7 +250,10 @@ footer {
 }
 @media (max-width: 560px) { // Hamburger Menu here down
 	body {margin-top: 51px;}
-	h1 {background: none; padding-left: 0;}
+	h1 {
+		background: none; padding-left: 0;font-size: 45px; line-height: 40px;
+		strong {font-size: 50px;}
+	}
 	header {
 		padding: 10px 0;
 		#navPrimary, #btnContact {display: none;}
@@ -276,10 +281,6 @@ footer {
 	#copyright span {font-size: 10px;}
 }
 @media (max-width: 400px) {
-	h1 {
-		font-size: 45px; line-height: 40px;
-		strong {font-size: 50px;}
-	}
 	h2 {font-size: 30px;}
 	p, a {font-size: 14px; line-height: 20px;}
 	#hero {
