@@ -89,7 +89,7 @@ header {
 	-webkit-transition: background 250ms linear; -ms-transition: background 250ms linear; transition: background 250ms linear;
 
 	#navMobile {
-		background: $colorWhite; margin-right: -240px; padding: 20px; width: 200px;
+		background: $colorWhite; margin-right: -240px; padding: 20px; width: 200px; overflow-y: auto;
 		position: fixed; top: 51px; right: 0; bottom: 0; z-index: 888;
 		-webkit-transition: margin 100ms linear; -ms-transition: margin 100ms linear; transition: margin 100ms linear;
 
@@ -123,7 +123,7 @@ header {
 	display: flex; flex-wrap: wrap; margin-top: 50px;
 	.cell {width: 50%;}
 	.cellInner {
-		border: 1px solid $colorGreyLight; margin: 10px; overflow: hidden;
+		border: 1px solid $colorGreyLight; display: block; margin: 10px; overflow: hidden;
 		div {float: left; margin-right: 20px; width: 200px; height: 200px;}
 		h2 {font-size: 28px; line-height: 28px; margin-top: 20px; text-transform: uppercase;}
 		p {font-size: 14px; line-height: 20px; margin-right: 20px;}
