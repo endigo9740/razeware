@@ -30,7 +30,7 @@ body {margin-top: 71px;} // offset for header
 
 h2, h3, h4, h5, h6 {color: $colorBlack; font-family: $fontBitter;}
 h1 {
-	background: url('../../img/hero-logo.png') center left no-repeat; padding-left: 140px;
+	background: url('../../img/hero-logo.png') center left no-repeat; padding: 20px 0 0 140px;
 	color: $colorWhite; font-family: $fontDefault; font-weight: 100; font-size: 65px; line-height: 55px;
 	strong {display: block; font-size: 70px;}
 }
